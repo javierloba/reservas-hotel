@@ -1,6 +1,6 @@
 import React from 'react'
 
-const RoomCard = () => {
+const RoomCard = ({ src, title, description }) => {
     return (
         <div>
             <h3>Soy la roomcard</h3>
