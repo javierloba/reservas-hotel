@@ -1,4 +1,4 @@
-import { CssBaseline, makeStyles, Button } from '@material-ui/core';
+import { CssBaseline, makeStyles, Button, Grid } from '@material-ui/core';
 import Banner from './Banner';
 import DatePicker from './DatePicker';
 import RoomCard from './RoomCard';
@@ -26,18 +26,21 @@ const Home = () => {
                     showdates && <DatePicker />
                 }
                 <Banner />
-                <div className={classes.section}>
+                <Grid container spacing={3} className={classes.section}>
                     {
                         mockData.map(({src, title, description}, index) => (
-                            <RoomCard 
-                            src={src} 
-                            title={title} 
-                            description={description} 
-                            key={index} 
-                            />
+                            <Grid item sm="6" md="4" lg="3" // Se divide entre 12 y sale cuantas fotos habrá
+                            >
+                                <RoomCard 
+                                src={src} 
+                                title={title} 
+                                description={description} 
+                                key={index} 
+                                />
+                            </Grid>
                         ))
                     }
-                </div>
+                </Grid>
             </div>
         </div>
     )
@@ -46,7 +49,8 @@ const Home = () => {
 const useStyle = makeStyles((theme) => ({
     root: {
         display: "flex",
-        flexDirection: "column"
+        flexDirection: "column",
+        margin: theme.spacing(2)
     },
     dates: {
         display: "flex",

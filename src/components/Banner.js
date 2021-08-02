@@ -1,5 +1,5 @@
 import { Button, makeStyles, Typography } from '@material-ui/core';
-import background_image from "../img/marvin-meyer-unsplash.jpg"
+import background_image from "../img/alexander-kaunas-unsplash.jpg"
 
 const Banner = () => {
 

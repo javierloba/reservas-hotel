@@ -1,11 +1,11 @@
-import indoorpool from "./img/marvin-meyer-unsplash.jpg";
-import bar from "./img/marvin-meyer-unsplash.jpg";
-import standard from "./img/marvin-meyer-unsplash.jpg";
-import outdoorpool from "./img/marvin-meyer-unsplash.jpg";
-import executive from "./img/marvin-meyer-unsplash.jpg";
-import withbalcony from "./img/marvin-meyer-unsplash.jpg";
-import juniorsuite from "./img/marvin-meyer-unsplash.jpg";
-import suite from "./img/marvin-meyer-unsplash.jpg";
+import indoorpool from "./img/lukas-marek-unsplash.jpg";
+import bar from "./img/edi-libedinsky-unsplash.jpg";
+import standard from "./img/hausphotomedia-com-unsplash.jpg";
+import outdoorpool from "./img/big-tiny-belly-unsplash.jpg";
+import executive from "./img/paul-postema-unsplash.jpg";
+import withbalcony from "./img/wade-momberg-unsplash.jpg";
+import juniorsuite from "./img/adam-winger-unsplash.jpg";
+import suite from "./img/sidekix-media-unsplash.jpg";
 
 const mockData = [
     {

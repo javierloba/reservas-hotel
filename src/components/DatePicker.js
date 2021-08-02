@@ -4,18 +4,28 @@ import { DateRangePicker } from 'react-date-range';
 import { Button, InputBase, makeStyles, Typography } from '@material-ui/core';
 import { People } from '@material-ui/icons';
 import { useHistory } from 'react-router-dom';
-
-const selectionRange = {
-    startDate: new Date(2021,6,26),
-    endDate: new Date(2021,6,31),
-    key: "selection"
-}
+import { useSelector, useDispatch } from "react-redux";
+import { selectStart, setStart } from "../features/startSlice";
+import { selectEnd, setEnd } from "../features/endSlice";
 
 const DatePicker = () => {
 
     const classes = useStyle();
-    const history = useHistory()
-    const handleSelect = () => {}
+    const history = useHistory();
+    const start = useSelector(selectStart);
+    const end = useSelector(selectEnd);
+    const dispatch = useDispatch();
+
+    const selectionRange = {
+        startDate: start,
+        endDate: end,
+        key: "selection"
+    }
+
+    const handleSelect = (ranges) => {
+        dispatch(setStart(ranges.selection.startDate.getTime()))
+        dispatch(setEnd(ranges.selection.endDate.getTime()))
+    }
 
     return (
         <div className={classes.root}>
