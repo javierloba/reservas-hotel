@@ -1,9 +1,11 @@
 import { Button, makeStyles, Typography } from '@material-ui/core';
-import background_image from "../img/alexander-kaunas-unsplash.jpg"
+import background_image from "../img/alexander-kaunas-unsplash.jpg";
+import { useHistory } from 'react-router-dom';
 
 const Banner = () => {
 
     const classes = useStyle();
+    const history = useHistory();
 
     return (
         <div className={classes.root}>
@@ -11,7 +13,9 @@ const Banner = () => {
                 <Typography variant="h2">
                     Plan your getaway...
                 </Typography>
-                <Button variant="contained">
+                <Button onClick={()=> history.push("/search")} 
+                variant="contained"
+                >
                     Check our rooms
                 </Button>
             </div>
